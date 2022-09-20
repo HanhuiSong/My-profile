@@ -1,13 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP1</title>
+    <link href="css/main.scss" rel="stylesheet"/>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/b3ad54752d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<meta http-equiv="refresh">
+<div id="navbar">
+    <b id="name">Hanhui Song</b>
+    <a id="hobby">Hobby</a>
+    <a id="work">Work Experience</a>
+    <a id="education">Education</a>
+    <a id="me">Me</a>
+</div>
+<div id="block">
+    <div id="b1">
+        <div id="b11">
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://linkedin.com/in/hanhui-song-17223b1aa" target="_blank">LinkedIn</a>
+            <br>
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/HanhuiSong" target="_blank">GitHub</a>
+            <br>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:hanhuisong01@gmail.com" target="_blank">Email</a>
+            <br>
+            <i class="fa-regular fa-file"></i>
+            <a href="https://drive.google.com/file/d/1tIj5_aZB8zYzli6C4LT3dCUFwta4WEHd/view?usp=sharing" target="_blank">CV</a>
+        </div>
+    </div>
+    <div id="b2">
+        <h1>My Education</h1>
+        <div id="edu">
+            <div>
+                <img src="assets/IMG_1085.JPG" alt="ucsc" id="ucsc">
+                <br>
+                <b>University of California, Santa Cruz</b>
+                <p>GPA 3.60</p>
+                <p>2018-2022</p>
+                <p>Undergraduate</p>
+                <p>Computer Science</p>
+                <div>
+                    <img src="assets/wordmark-blue-background.png" alt="uiuc">
+                    <br>
+                    <div id="uiuc">
+                        <b>University of Illinois at Urbana-Champaign</b>
+                        <p>2022-present</p>
+                        <p>Graduate</p>
+                        <p>Master in Computer Science</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="b3">
+        <h1>Work Experience</h1>
+        <div id="video">
+            <video width="100%" autoplay loop controls>
+                <source src="assets/5f9f161d.mp4" type="video/mp4">
+            </video>
+            <div id="workE">
+                <div id="myBtn1">eBay</div>
+                <div id="myBtn2">Fujian Rongji</div>
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <b class="b31">eBay Engineering and Research Center (Shanghai) Co., Ltd &nbsp;&nbsp;&nbsp;Jul. 2021
+                        - Sept. 2021 </b>
+                    <br>
+                    <b class="b32">Position: Intern &nbsp;&nbsp;&nbsp;Department: Risk P2.0-China Department &nbsp;&nbsp;&nbsp;Nature:
+                        Full-time</b>
+                    <p class="b33">
+                        - Deployed Mongo and MySQL database based on Docker to Kubectl<br>
+                        - Modified Yaml file to claim a persistent Volume and hence made pods persistent<br>
+                        - Provided API based on flask format using python through Docker<br>
+                        - Provided both mock and actual data from CSV files to support front-end testing<br>
+                        - Provided shell script for front-end<br>
+                    </p>
+                </div>
+            </div>
+            <div id="myModal1" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <b class="b31">Fujian Rongji Software Co., Ltd &nbsp;&nbsp;&nbsp;Jul. 2020 - Aug. 2020</b>
+                    <br>
+                    <b class="b32">Position: Intern &nbsp;&nbsp;&nbsp;Department: Research and Development &nbsp;&nbsp;&nbsp;Nature:
+                        Full-time</b>
+                    <p class="b33">
+                        - Assisted in developing a voting project for conferences in which logged-in users voters cast
+                        votes<br>
+                        - Responsible for the working backends, using Java to store the excel of voter information into
+                        MySQL, <br>
+                        providing API for voters and presetting accounts of different levels by Springboot<br>
+                        - Took data to restore in Redis after voting<br>
+                        - Used the HTML and Websocket to achieve data response actively in order to update the data on
+                        the main<br>
+                        screen in real-time<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="b4">
+        <h1>My Hobby</h1>
+        <div class="slide">
+            <div class="mySlides fade">
+                <img class="slideimg" src="assets/IMG_0021.JPG">
+                <div class="text">I like to travel. I have been to several countries and experienced cultural
+                    differences.
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <img class="slideimg" src="assets/IMG_1300.JPG">
+                <div class="text">I like sports. Badminton, for example, is one of my favorite sports.</div>
+            </div>
+            <div class="mySlides fade">
+                <img class="slideimg" src="assets/IMG_0087.JPG">
+                <div class="text">I like recreational and competitive shooting.</div>
+            </div>
+            <div class="mySlides fade">
+                <img class="slideimg" src="assets/IMG_1028.JPG">
+                <div class="text">I joined the NRA basic pistol training course and achieved a level 4 marksmanship.
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <img class="slideimg" src="assets/IMG_1329.JPG">
+                <div class="text">I have been playing Airsoft for a long time so after I arrived at UIUC, I joined the
+                    Airsoft club and attended there first open-play.
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#8592</a>
+            <a class="next" onclick="plusSlides(1)">&#8594</a>
+        </div>
+    </div>
+</div>
+</body>
+<footer>
+    <br>
+    <br>
+    <div class="footer">
+        <i class="fa-regular fa-copyright"></i>
+        <a>2022 Hanhui Song. All Rights Reserved.</a>
+        <br>
+        <a>Feel free to contact me. I am currently searching Summer 2023 Software Engineering internship.</a>
+        <i class="fa-brands fa-weixin" id="wechat">John__W1ck</i>
+    </div>
+</footer>
 </html>
