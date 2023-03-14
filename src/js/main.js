@@ -8,7 +8,14 @@ window.onscroll = function () {
 var navbar = document.getElementById("navbar");
 
 var name = document.getElementById('name');
-var sticky = navbar.offsetTop;
+
+if(navbar!==null){
+    var sticky = navbar.offsetTop;
+} else {
+    sticky = null;
+}
+
+
 var me = document.getElementById("me");
 var education = document.getElementById("education");
 var work = document.getElementById("work");
@@ -20,12 +27,16 @@ var b4 = document.getElementById("b4");
 
 function stickyBar() {
     if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-        navbar.style.padding = "0px 0px";
-        navbar.style.borderRadius = "25px";
-        navbar.style.position = "fixed";
-        navbar.style.width = "100%";
-        name.style.fontSize = '30px';
+        if(navbar!==null){
+            navbar.classList.add("sticky");
+            navbar.style.padding = "0px 0px";
+            navbar.style.borderRadius = "25px";
+            navbar.style.position = "fixed";
+            navbar.style.width = "100%";
+        }
+        if(name!==null){
+            name.style.fontSize = '30px';
+        }
         me.style.fontSize = "10px";
         education.style.fontSize = "10px";
         work.style.fontSize = "10px";
@@ -75,19 +86,26 @@ function positionIn() {
         hobby.style.color = "White";
     }
 }
-
-me.onclick = function () {
+if(me!==null){
+   me.onclick = function () {
     window.scrollTo(0, 45);
-};
-education.onclick = function () {
-    window.scrollTo(0, edu_position());
-};
-work.onclick = function () {
-    window.scrollTo(0, work_position());
-};
-hobby.onclick = function () {
-    window.scrollTo(0, ho_position());
-};
+    };
+}
+if(education!==null){
+    education.onclick = function () {
+        window.scrollTo(0, edu_position());
+    };
+}
+if(work!==null){
+    work.onclick = function () {
+        window.scrollTo(0, work_position());
+    };
+}
+if(hobby!==null){
+    hobby.onclick = function () {
+        window.scrollTo(0, ho_position());
+    };
+}
 function edu_position(){
     let rect = b2.getBoundingClientRect();
     return rect.top + window.scrollY - 45;
@@ -128,7 +146,9 @@ function showSlides(n) {
     }
     let x = slideIndex;
     console.log(x);
-    slides[x - 1].style.display = "block";
+    if(slides[x - 1]!==undefined){
+        slides[x - 1].style.display = "block";
+    }
 }
 
 var modal = document.getElementById("myModal");
@@ -137,17 +157,26 @@ var btn1 = document.getElementById("myBtn1");
 var btn2 = document.getElementById("myBtn2");
 var span1 = document.getElementsByClassName("close")[0];
 var span2 = document.getElementsByClassName("close")[1];
-btn1.onclick = function () {
-    modal.style.display = "block";
+if(btn1!==null){
+    btn1.onclick = function () {
+        modal.style.display = "block";
+    }
 }
-btn2.onclick = function () {
-    modal1.style.display = "block";
+
+if(btn2!==null){
+    btn2.onclick = function () {
+        modal1.style.display = "block";
+    }
 }
-span1.onclick = function () {
-    modal.style.display = "none";
+if(span1!==undefined){
+    span1.onclick = function () {
+        modal.style.display = "none";
+    }
 }
-span2.onclick = function () {
-    modal1.style.display = "none";
+if(span2!==undefined){
+    span2.onclick = function () {
+        modal1.style.display = "none";
+    }
 }
 window.onclick = function (event) {
     if (event.target == modal) {
